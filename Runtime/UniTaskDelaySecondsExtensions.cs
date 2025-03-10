@@ -32,7 +32,8 @@ namespace com.ktgame.unitask.extensions
             );
         }
 
-        public static UniTask DelaySecondsIf(this Component self, bool condition, double seconds, bool ignoreTimeScale = false,
+        public static UniTask DelaySecondsIf(this Component self, bool condition, double seconds,
+            bool ignoreTimeScale = false,
             PlayerLoopTiming delayTiming = PlayerLoopTiming.Update, CancellationToken cancellationToken = default)
         {
             if (!condition) return UniTask.CompletedTask;
@@ -46,7 +47,8 @@ namespace com.ktgame.unitask.extensions
             );
         }
 
-        public static UniTask DelaySeconds(this GameObject self, double seconds, DelayType delayType, PlayerLoopTiming delayTiming = PlayerLoopTiming.Update,
+        public static UniTask DelaySeconds(this GameObject self, double seconds, DelayType delayType,
+            PlayerLoopTiming delayTiming = PlayerLoopTiming.Update,
             CancellationToken cancellationToken = default)
         {
             return UniTask.DelaySeconds
@@ -59,7 +61,8 @@ namespace com.ktgame.unitask.extensions
             );
         }
 
-        public static UniTask DelaySeconds(this Component self, double seconds, DelayType delayType, PlayerLoopTiming delayTiming = PlayerLoopTiming.Update,
+        public static UniTask DelaySeconds(this Component self, double seconds, DelayType delayType,
+            PlayerLoopTiming delayTiming = PlayerLoopTiming.Update,
             CancellationToken cancellationToken = default)
         {
             return UniTask.DelaySeconds
